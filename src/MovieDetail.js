@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import { Poster } from './Movie';
 import Overdrive from 'react-overdrive';
 const POSTER_PATH = 'http://image.tmdb.org/t/p/w154';
@@ -10,6 +10,7 @@ class MovieDetail extends Component {
         movie: {},
     }
     async componentDidMount() {
+
         try {
             const res = await fetch(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=131c87cb54773ae0f6c9b813ce9041b2&language=en-US`);
 
@@ -29,7 +30,7 @@ class MovieDetail extends Component {
 
         return (
             <MovieWrapper backdrop={`${BACKDROP_PATH}${movie.backdrop_path}`}>
-
+                <img src={`${BACKDROP_PATH}${movie.backdrop_path}`} alt={movie.title} />
                 <MovieInfo>
                     <Overdrive id={movie.id}>
                         <Poster src={`${POSTER_PATH}${movie.poster_path}`} alt={movie.title} />
@@ -39,8 +40,8 @@ class MovieDetail extends Component {
                         <h3>{movie.release_date}</h3>
                         <p>{movie.overview}</p>
                     </div>
-                </MovieInfo>
-            </MovieWrapper>
+                </MovieInfo >
+            </MovieWrapper >
         );
     }
 }
@@ -50,7 +51,6 @@ export default MovieDetail;
 const MovieWrapper = styled.div`
  position: relative;
  padding-top:50vh;
-
  background-size:cover;
 `;
 
@@ -59,9 +59,9 @@ background:white;
 text-align:left;
 padding: 2rem 10%;
 display: flex;
->div{
+ >div{
   margin-left:20px;
-}
+ }
 img {
   position:relative;
 }
