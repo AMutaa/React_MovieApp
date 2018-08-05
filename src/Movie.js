@@ -17,6 +17,7 @@ const Movie = ({ movie }) => (
 );
 export default Movie;
 
+
 export const Poster = styled.img`
 box-shadow: 0 0 35px black
 `;
