@@ -49,9 +49,10 @@ class MovieDetail extends Component {
 export default MovieDetail;
 
 const MovieWrapper = styled.div`
- position: relative;
- padding-top:50vh;
- background-size:cover;
+img{
+
+}
+
 `;
 
 const MovieInfo = styled.div`
