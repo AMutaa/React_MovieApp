@@ -6,7 +6,7 @@ import {
   Switch,
   Link
 } from 'react-router-dom'
-import logo from './logo.svg';
+
 import './App.css';
 import MoviesList from './MoviesList';
 import MovieDetail from './MovieDetail';
@@ -21,7 +21,10 @@ const App = () => (
     <div className="App">
       <header className="App-header">
         <Link to="/" className="logo_link">
-          <h1>NET</h1><img src={logo} className="App-logo" alt="logo" /><h1>MOVIES</h1>
+          <div className="logo">
+            <h1>NET</h1>
+            <h1>MOVIES</h1>
+          </div>
         </Link>
       </header>
       <Switch>

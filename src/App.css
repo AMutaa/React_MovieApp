@@ -2,12 +2,18 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 50px;
+.logo{
+  border: 2px solid #ffcf40;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  border-radius: 10%;
+  padding: 10px;
 }
 h1{
   margin: 10px;
   text-decoration: none;
+  color: #ffcf40;
 }
 .logo_link{
   display: flex;
@@ -19,7 +25,7 @@ h1{
 
 .App-header {
   background-color: #111;
-  height: 100px;
+  height: 150px;
   padding: 20px;
   color: white;
 }
