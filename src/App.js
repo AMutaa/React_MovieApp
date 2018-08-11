@@ -20,8 +20,8 @@ const App = () => (
   <Router>
     <div className="App">
       <header className="App-header">
-        <Link to="/">
-          <img src={logo} className="App-logo" alt="logo" />
+        <Link to="/" className="logo_link">
+          <h1>NET</h1><img src={logo} className="App-logo" alt="logo" /><h1>MOVIES</h1>
         </Link>
       </header>
       <Switch>
