@@ -1,19 +1,28 @@
 .App {
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
+@font-face {
+  font-family: 'Star';
+  src: url('./SF\ Distant\ Galaxy\ Outline\ Italic.ttf');
+}
+
+
 .logo{
-  border: 2px solid #ffcf40;
+  border: 1px solid #ffcf40;
   display: flex;
   flex-direction:column;
   align-items: center;
-  border-radius: 10%;
-  padding: 10px;
+  border-radius: 5%;
+  padding: 5px;
 }
 h1{
   margin: 10px;
   text-decoration: none;
   color: #ffcf40;
+  font-family: Star;
+  letter-spacing: 3px;
 }
 .logo_link{
   display: flex;
@@ -24,25 +33,35 @@ h1{
 }
 
 .App-header {
-  background-color: #111;
-  height: 150px;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  height: 120px;
   padding: 20px;
   color: white;
 }
 .movie_grid{
   display:grid;
-  padding:1rem;
-  grid-template-columns: repeat(6, 1fr);
+  padding:2rem 10rem;
+  grid-template-columns: repeat(5, 1fr);
   grid-row-gap:1rem;
 }
 .poster{
   box-shadow: 0 0 35px black
 }
+.backdrop{
+  width: 100%;
+}
 .movieInfo{
 background:white;
 text-align:left;
-padding: 2rem 10%;
+padding:2rem 2rem;
 display: flex;
+border: 2px solid #0F2027;
+border-radius: 7px;
+margin: 1rem 20%
+
 }
 
 .desc{
