@@ -13,6 +13,7 @@ class MoviesList extends Component {
       this.setState({
         movies: movies.results
       })
+
     } catch (e) {
       console.log(e)
     }
