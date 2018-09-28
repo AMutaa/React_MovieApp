@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Movie from './Movie';
-
-
 class MoviesList extends Component {
   state = {
     movies: [],
