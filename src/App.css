@@ -34,19 +34,12 @@ h1 {
 
 }
 
-
 .poster {
   box-shadow: 0 0 35px black
 }
 
 .backdrop {
   width: 100%;
-}
-
-
-
-.desc {
-  margin-left: 20px;
 }
 
 img {

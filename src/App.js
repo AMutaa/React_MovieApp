@@ -12,10 +12,6 @@ import './App.css';
 import MoviesList from './MoviesList';
 import MovieDetail from './MovieDetail';
 
-
-
-
-
 const App = () => (
 
     <Router>

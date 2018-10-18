@@ -34,11 +34,11 @@ class MovieDetail extends Component {
                     <Overdrive id={movie.id}>
                         <img className="poster" src={`${POSTER_PATH}${movie.poster_path}`} alt={movie.title} />
                     </Overdrive>
-                    <div className="desc">
+                    <Description >
                         <h2>{movie.title}</h2>
                         <h3>{movie.release_date}</h3>
                         <p>{movie.overview}</p>
-                    </div>
+                    </Description>
                 </MovieInfo >
             </div >
         );
@@ -55,4 +55,8 @@ display: flex;
 border: 2px solid #0F2027;
 border-radius: 7px;
 margin: 1rem 20%
+`;
+
+const Description = styled.div`
+margin-left: 20px;
 `;
