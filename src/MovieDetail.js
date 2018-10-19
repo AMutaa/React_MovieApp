@@ -31,7 +31,7 @@ class MovieDetail extends Component {
             <div backdrop={`${BACKDROP_PATH}${movie.backdrop_path}`}>
                 <img className="backdrop" src={`${BACKDROP_PATH}${movie.backdrop_path}`} alt={movie.title} />
                 <MovieInfo>
-                    <Overdrive id={movie.id}>
+                    <Overdrive id={`${movie.id}`}>
                         <img className="poster" src={`${POSTER_PATH}${movie.poster_path}`} alt={movie.title} />
                     </Overdrive>
                     <Description >
