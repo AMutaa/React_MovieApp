@@ -1,18 +1,26 @@
 import React from 'react';
-import { render, cleanup } from 'react-testing-library';
+import { render, cleanup, fireEvent } from 'react-testing-library';
 import Counter from './Counter'
+
+//run after every test
+afterEach(cleanup);
 
 test('<Counter/>', () => {
   const { debug, getByTestId } = render(<Counter />);
   debug(); //Outputs dom as a string
 
-  // expect(wrapper.getByText('0').tagName).toBe('BUTTON')
+  const counterButton = getByTestId('counter-button');
 
   //Asserts counter-button is a button
-  expect(getByTestId('counter-button').tagName).toBe('BUTTON')
+  expect(counterButton.tagName).toBe('BUTTON');
   //Asserts counter-button starts at 0
-  expect(getByTestId('counter-button').textContent).toBe('0')
+  expect(counterButton.textContent).toBe('0');
 
+  fireEvent.click(counterButton);
+  expect(counterButton.textContent).toBe('1');
+
+  fireEvent.click(counterButton);
+  expect(counterButton.textContent).toBe('2')
 });
 
 
