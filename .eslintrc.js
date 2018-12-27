@@ -34,5 +34,9 @@ module.exports = {
             "always"
         ],
 
+    },
+    "globals": {
+        "test": true,
+        "expect": true,
     }
 };
