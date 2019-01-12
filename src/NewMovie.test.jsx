@@ -6,11 +6,10 @@ import NewMovie from './NewMovie';
 afterEach(cleanup)
 test('<NewMovie/>', () => {
   // render the component
-  const { debug, getByTestId, queryByTestId, container } = render(<NewMovie />);
+  const { debug, getByTestId, queryByTestId, container, getByText } = render(<NewMovie />);
   //write some tests
   expect(getByTestId('page-title').textContent).toBe('New Movie')
   expect(queryByTestId('movie-form')).toBeTruthy();
-  expect(container.firstChild).toMatchSnapshot()
   // console.log(container)
-
+  expect(container.firstChild).toMatchSnapshot()
 })
