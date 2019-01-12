@@ -15,7 +15,12 @@ export default class MovieForm extends Component {
       <form data-testid="movie-form" onSubmit={() => submitForm({
         text
       })}>
-        <input type="text" />
+        <label htmlFor="text">Text</label>
+        <input
+          type="text"
+          id="text"
+          onChange={e => this.setState({ text: e.target.value })}
+        />
         <button>Submit</button>
       </form >
     )
