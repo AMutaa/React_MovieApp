@@ -19,12 +19,12 @@ class MoviesList extends Component {
     }
   }
 
-
   render() {
-
+    const { movies } = this.state
+    if (movies < 1) return <h1 data-testid='loading'>Loading...</h1>
     return (
       <MovieGrid>
-        {this.state.movies.map(movie => <Movie key={movie.id} movie={movie} />)}
+        {movies.map(movie => <Movie data-testid='movie-link' key={movie.id} movie={movie} />)}
       </MovieGrid>
 
     );
