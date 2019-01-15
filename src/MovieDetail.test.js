@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from 'react-testing-library';
+import { render, cleanup, waitForElement } from 'react-testing-library';
 import MovieDetail from './MovieDetail';
 
 global.fetch = require('jest-fetch-mock');
@@ -17,15 +17,14 @@ const match = {
 
 console.error = jest.fn();
 
-test('<MovieDetail />', () => {
+const movie = {
+  id: 'djshd',
+  title: 'Level Up Rules!'
+}
 
-  fetch.mockResponseOnce(JSON.stringify({
-    movie: {
-      id: 'djshd',
-      title: 'Level Up'
-    }
-  }))
-
-  const { debug } = render(<MovieDetail match={match} />);
-  debug();
+test('<MovieDetail />', async () => {
+  fetch.mockResponseOnce(JSON.stringify(movie));
+  const { getByTestId } = render(<MovieDetail match={match} />);
+  await waitForElement(() => getByTestId('movie-title'))
+  expect(getByTestId('movie-title').textContent).toBe(movie.title)
 });

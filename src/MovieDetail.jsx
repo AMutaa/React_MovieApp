@@ -17,6 +17,7 @@ class MovieDetail extends Component {
             this.setState({
                 movie: movie,
             })
+
         } catch (e) {
             console.log(e)
         }
@@ -24,8 +25,8 @@ class MovieDetail extends Component {
 
 
     render() {
-
         const { movie } = this.state;
+        if (!movie.id) return null;
 
         return (
             <div backdrop={`${BACKDROP_PATH}${movie.backdrop_path}`}>
@@ -35,7 +36,7 @@ class MovieDetail extends Component {
                         <img className="poster" src={`${POSTER_PATH}${movie.poster_path}`} alt={movie.title} />
                     </Overdrive>
                     <Description >
-                        <h2>{movie.title}</h2>
+                        <h2 data-testid='movie-title'>{movie.title}</h2>
                         <h3>{movie.release_date}</h3>
                         <p>{movie.overview}</p>
                     </Description>
