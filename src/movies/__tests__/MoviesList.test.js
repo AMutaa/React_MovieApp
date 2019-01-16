@@ -15,6 +15,7 @@ afterEach(() => {
 console.error = jest.fn();
 
 const movies = {
+
   results: [
     {
       id: 'hi',
