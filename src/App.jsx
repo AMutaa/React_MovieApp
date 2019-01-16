@@ -2,10 +2,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import styled from 'styled-components';
-
 import './App.css';
-import MoviesList from './MoviesList';
-import MovieDetail from './MovieDetail';
+import MoviesList from './movies/MoviesList';
+import MovieDetail from './movies/MovieDetail';
 
 const App = () => (
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, cleanup, fireEvent } from 'react-testing-library';
-import NewMovie from './NewMovie';
+import NewMovie from '../NewMovie';
 
 // after every test runs, it's going to remove everything from the DOM\
 afterEach(cleanup)

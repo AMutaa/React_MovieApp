@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, cleanup, fireEvent } from 'react-testing-library';
-import MovieForm from './MovieForm';
+import MovieForm from '../MovieForm';
 
 // after every test runs, it's going to remove everything from the DOM\
 afterEach(cleanup)
